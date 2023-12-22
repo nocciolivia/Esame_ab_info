@@ -19,7 +19,8 @@ fi
 
 # Lancio il programma python Nemo_2.py dandogli il input il nome del file da cui estrarre i dati. Allo stesso modo potrei far leggere in questo modo anche i file degli intervalli d'età.
 
-python3 nemo_2.py "$file_name"
+#python3 ./nemo_2.py "$file_name"
+python /usr/local/bin/your_app/nemo_2.py "$file_name"
 
 
 
@@ -34,10 +35,10 @@ python3 nemo_2.py "$file_name"
 
 
 
-pwd
+#pwd
 
-echo$? 
-$? = Return status
+#echo$? 
+#$? = Return status
 
 
-read envireonmental variable to acquire the path and make the application indipendent from location
+#read envireonmental variable to acquire the path and make the application indipendent from location
