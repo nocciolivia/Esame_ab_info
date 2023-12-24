@@ -12,33 +12,12 @@ wget "$file_url" -O "$file_name"
 
 if [ $? -eq 0 ]
   then
-    echo "Download successful. File saved as $file_name."
+    echo "Download avvenuto correttamente. File salvato come $file_name."
   else
-    echo "Download not succesfull."
+    echo "Download non avvenuto correttamente."
 fi
 
-# Lancio il programma python Nemo_2.py dandogli il input il nome del file da cui estrarre i dati. Allo stesso modo potrei far leggere in questo modo anche i file degli intervalli d'età.
+# Lancio il programma python nemo_2.py dandogli il input il nome del file da cui estrarre i dati.
 
 #python3 ./nemo_2.py "$file_name"
-python /usr/local/bin/your_app/nemo_2.py "$file_name"
-
-
-
-
-################## Add helpppppppp!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-
-######  Posso aggiungere che lo salvi nella directory in cui si trova il file python oppure posso fare si che il file python lo vada a ppescare cercandolo fra le cartelle
-
-
-
-
-#pwd
-
-#echo$? 
-#$? = Return status
-
-
-#read envireonmental variable to acquire the path and make the application indipendent from location
+python /usr/local/bin/nemo_inst/nemo_2.py "$file_name"  # Il programma python si trova nella cartella d'installazione in /usr/local/bin.

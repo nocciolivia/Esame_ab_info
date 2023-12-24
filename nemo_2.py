@@ -1,4 +1,4 @@
-# Faccio i grafici richiesti suddividendo i punti in base all'età.
+# Il programma produce i grafici richiesti suddividendo i punti in base all'età.
 # Fornisco da file i limiti dei bin d'età e il programma li smista di conseguenza.
 # I grafici prodotti sono 1) Diagramma colore-magnitudine, 2) Istogramma delle metallicità, 3) Metallicità in funzione della massa iniziale. I grafici 2) e 3) vengono fatti seguendo la stessa suddivisione in intervalli d'età, in generale diversa da quella utilizzata per il grafico 1).
 
@@ -17,7 +17,7 @@ colormap1 = plt.cm.Pastel1
 
 
 #data_file = "Nemo_6670.dat"
-data_file = sys.argv[1]     # Per leggere il nome del file come command-line argument (così posso fornirlo dallo script.
+data_file = sys.argv[1]     # Per leggere il nome del file come command-line argument (così posso fornirlo dallo script).
 
 data = np.loadtxt(data_file, delimiter = ' ' , usecols = (0,1,4,8,12), unpack = True)
 
@@ -61,7 +61,7 @@ age1 = np.loadtxt(bin_data_1, unpack=True)
 # Aver riordinato i dati all'inizio permette di evitare un secondo ciclo for (sugli indici di M_ass e b-y associati alle età che rientrano in ciascun intervallo), questo permette di risparmiare diversi secondi.
 
 # Con un ciclo for sul numero degli intervalli si cercano con np.where i punti che ricadano nello specifico intervallo, creando un'array di indici (che sono consecutivi perchè i dati sono stati riordinati per età). Per ogni set di indici individuato (cioè per ogni set di punti in un determinato intervallo d'età) si produce il grafico richiesto. Tutti i plot vengono stampati sullo stesso grafico.
-# Dato che i punti sono ordinati per produrre il grafico posso semplicemente dire di graficare i punti dal primo indice contenuto in index1 all'ultimo, evitando un ciclo for sugli indici contenuti in index1.
+# Dato che i punti sono ordinati, per produrre il grafico posso semplicemente dire di graficare i punti dal primo indice contenuto in index1 all'ultimo, evitando un ciclo for sugli indici contenuti in index1.
 
 
 f1 = plt.figure(1)
@@ -75,7 +75,7 @@ for i in range(1,len(age1)):
     index1 = np.where((age1[i]-age_parent >= 0) & (age1[i]-age_parent < s1))[0]
     
     if(len(index1) == 0):
-        print('No points in interval {0:.2f} Gyr - {1:.2f} Gyr' .format(age1[i-1], age1[i]))
+        print('Nessun punto nell intervallo {0:.2f} Gyr - {1:.2f} Gyr' .format(age1[i-1], age1[i]))
         print('-------------------------------------------------------------')
         
     else:
@@ -92,7 +92,6 @@ plt.xlabel('b-y')
 plt.ylabel('M_v')
 plt.rc("legend", fontsize=5)
 plt.legend(markerscale = 5.0)
-
 
 
 
@@ -131,7 +130,7 @@ for j in range(1,len(age2)):
     index2 = np.where((age2[j]-age_parent >= 0) & (age2[j]-age_parent < s2))[0]
     
     if(len(index2) == 0):
-        print('No points in interval {0:.2f} Gyr - {1:.2f} Gyr' .format(age2[j-1], age2[j]))
+        print('Nessun punto nell intervallo {0:.2f} Gyr - {1:.2f} Gyr' .format(age2[j-1], age2[j]))
         print('-------------------------------------------------------------')
         
     else:
@@ -175,6 +174,7 @@ plt.xlabel('m_ini')
 plt.ylabel('MsuH')
 plt.rc("legend", fontsize=5)
 plt.legend(markerscale = 5.0)
+
 
 
 plt.show()
