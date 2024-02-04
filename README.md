@@ -37,6 +37,7 @@ I dati usati per i tre grafici vengono inoltre suddivisi in intervalli d'età; i
 Gli estremi degli intervalli per realizzare questa suddivisione devono essere scritti in un file di testo, il cui nome viene richiesto in input dal programma.
 Il programma permette di utilizzare due file di testo separati (e quindi due suddivisioni diverse in bin d'età) per realizzare le figure 1 e 2.
 I due grafici della figura 2 vengono realizzati sulla stessa suddivisione in età.
+NOTA: I due file di testo devono trovarsi nella stessa directory da cui si lancia il programma al momento dell'esecuzione.
 
 Le figure così prodotte vengono infine mostrate a schermo.
 
