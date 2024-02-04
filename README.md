@@ -22,12 +22,18 @@ Per il programma seguire le informazioni a schermo e vedere 'Descrizione dell'ap
 
 L'applicazione è costituita dal programma python 'nemo_2.py' e dal suo script di esecuzione 'start.sh'.
 
+-------------------------------------------------------------------
+
+'nemo_2.py' ---> INPUT: File di testo contenenti gli estremi per la suddivisione in intervalli di età (vedi dopo);
+                 OUTPUT: Figure 1,2 (vedi dopo).
+
 'nemo_2.py' legge i dati necessari dal file 'Nemo_6670.dat' e realizza due figure:
 
     FIGURA 1 - Contiene il diagramma colore-magnitudine;
     FIGURA 2 - Contiene l'istogramma delle metallicità e il grafico della metallicità in funzione della massa iniziale come due subplot della stessa figura.
 
 I dati usati per i tre grafici vengono inoltre suddivisi in intervalli d'età; i punti associati a ciascun intervallo sono colorati ed etichettati in modo diverso.
+
 Gli estremi degli intervalli per realizzare questa suddivisione devono essere scritti in un file di testo, il cui nome viene richiesto in input dal programma.
 Il programma permette di utilizzare due file di testo separati (e quindi due suddivisioni diverse in bin d'età) per realizzare le figure 1 e 2.
 I due grafici della figura 2 vengono realizzati sulla stessa suddivisione in età.
