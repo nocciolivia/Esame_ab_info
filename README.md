@@ -54,4 +54,4 @@ Lo script 'start.sh' scarica il file 'Nemo_6670.dat' da github (salvandolo nella
 
 ----------------------------
 
-Per ulteriori dettagli sul funzionamento si può fare riferimento direttamente agli script.
+Per informazioni più specifiche sul funzionamento si può fare riferimento direttamente agli script.
